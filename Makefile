@@ -5,8 +5,7 @@ SD=src/
 OD=build/
 EXECUTABLE=bin/geometry.exe
 all: $(EXECUTABLE)
-	
-$(EXECUTABLE): $(OD)main.o $(OD)perimetr.o $(OD)square.o $(OD)cross.o 
+$(EXECUTABLE): $(OD)main.o $(OD)perimetr.o $(OD)square.o $(OD)cross.o
 	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)perimetr.o $(OD)square.o $(OD)cross.o -lm
 $(OD)main.o: $(SD)main.cpp
 	$(CC) $(CFLAGS) -c -o $(OD)main.o $(SD)main.cpp -lm
